@@ -8,11 +8,10 @@ import ListItem from './ListItem';
 class EmployeeList extends Component {
 	componentWillMount() {
 		this.props.employeesFetch();
-
 		this.createDataSource(this.props);
 	}
 
-	componentWillReceiveProp(nextProps) {
+	componentWillReceiveProps(nextProps) {
 		this.createDataSource(nextProps);
 	}
 
@@ -29,7 +28,7 @@ class EmployeeList extends Component {
 	}
 
 	render() {
-		console.log(this.props);
+		//console.log(this.props);
 		return (
 			<ListView
 				enableEmptySections
